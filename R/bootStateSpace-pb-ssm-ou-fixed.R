@@ -135,7 +135,8 @@ PBSSMOUFixed <- function(R,
                          maxeval = as.integer(-1),
                          maxtime = -1,
                          ncores = NULL,
-                         seed = NULL) {
+                         seed = NULL,
+                         clean = TRUE) {
   R <- as.integer(R)
   stopifnot(R > 0)
   if (!type == 0) {
@@ -183,7 +184,8 @@ PBSSMOUFixed <- function(R,
     maxeval = maxeval,
     maxtime = maxtime,
     ncores = ncores,
-    seed = seed
+    seed = seed,
+    clean = clean
   )
   par <- FALSE
   if (!is.null(ncores)) {
@@ -331,7 +333,16 @@ PBSSMOUFixed <- function(R,
     "bootstatespace",
     class(out)
   )
-  return(
-    out
-  )
+  if (clean) {
+    unlink(
+      file.path(
+        path,
+        paste0(
+          prefix,
+          "*.Rds"
+        )
+      )
+    )
+  }
+  out
 }

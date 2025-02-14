@@ -25,5 +25,5 @@
       observed = paste0("y", seq_len(k))
     )
   }
-  return(output)
+  output
 }

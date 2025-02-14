@@ -131,10 +131,8 @@
     path = path,
     prefix = prefix
   )
-  return(
-    list(
-      prep = prep,
-      thetahatstar = thetahatstar
-    )
+  list(
+    prep = prep,
+    thetahatstar = thetahatstar
   )
 }

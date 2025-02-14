@@ -37,12 +37,10 @@
     }
   }
   # covariates not allowed at the moment
-  return(
-    dynr::prep.initial(
-      values.inistate = mu0,
-      params.inistate = params_inistate,
-      values.inicov = sigma0,
-      params.inicov = params_inicov
-    )
+  dynr::prep.initial(
+    values.inistate = mu0,
+    params.inistate = params_inistate,
+    values.inicov = sigma0,
+    params.inicov = params_inicov
   )
 }

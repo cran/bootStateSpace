@@ -1,5 +1,3 @@
 .CoefFitDynr <- function(x) {
-  return(
-    x@transformed.parameters
-  )
+  x@transformed.parameters
 }

@@ -72,17 +72,15 @@
       intercept_value
     )
   }
-  return(
-    list(
-      dynamics = dynr::prep.formulaDynamics(
-        formula = lapply(
-          X = formula,
-          FUN = stats::as.formula
-        ),
-        startval = startval,
-        isContinuousTime = continuous
+  list(
+    dynamics = dynr::prep.formulaDynamics(
+      formula = lapply(
+        X = formula,
+        FUN = stats::as.formula
       ),
-      startval = startval
-    )
+      startval = startval,
+      isContinuousTime = continuous
+    ),
+    startval = startval
   )
 }

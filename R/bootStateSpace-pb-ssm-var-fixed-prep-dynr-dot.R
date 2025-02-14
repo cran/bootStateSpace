@@ -71,13 +71,11 @@
     mu0_values,
     sigma0_values
   )
-  return(
-    list(
-      est = est,
-      dynr_initial = dynr_initial,
-      dynr_measurement = dynr_measurement,
-      dynr_noise = dynr_noise,
-      dynr_dynamics = dynr_dynamics
-    )
+  list(
+    est = est,
+    dynr_initial = dynr_initial,
+    dynr_measurement = dynr_measurement,
+    dynr_noise = dynr_noise,
+    dynr_dynamics = dynr_dynamics
   )
 }

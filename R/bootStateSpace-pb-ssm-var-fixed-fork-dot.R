@@ -99,10 +99,8 @@
     prefix = prefix,
     mc.cores = ncores
   )
-  return(
-    list(
-      prep = prep,
-      thetahatstar = thetahatstar
-    )
+  list(
+    prep = prep,
+    thetahatstar = thetahatstar
   )
 }

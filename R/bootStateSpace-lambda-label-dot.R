@@ -20,7 +20,7 @@
       arr.ind = TRUE
     )
     labels[zero_indices] <- "fixed"
-    return(labels)
+    labels
   }
   .SetAnchors <- function(labels,
                           lambda,
@@ -34,7 +34,7 @@
         }
       }
     }
-    return(labels)
+    labels
   }
   labels <- .GenerateLabels(
     k = k,
@@ -44,11 +44,9 @@
     labels = labels,
     lambda = lambda
   )
-  return(
-    .SetAnchors(
-      labels = labels,
-      lambda = lambda,
-      p = p
-    )
+  .SetAnchors(
+    labels = labels,
+    lambda = lambda,
+    p = p
   )
 }

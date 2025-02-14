@@ -12,7 +12,7 @@
       arr.ind = TRUE
     )
     params[zero_indices] <- "fixed"
-    return(params)
+    params
   }
   theta <- tcrossprod(theta_l)
   process <- tcrossprod(process_l)
@@ -24,12 +24,10 @@
     x = process,
     label = if (continuous) "sigma" else "psi"
   )
-  return(
-    dynr::prep.noise(
-      values.latent = process,
-      params.latent = params_latent,
-      values.observed = theta,
-      params.observed = params_observed
-    )
+  dynr::prep.noise(
+    values.latent = process,
+    params.latent = params_latent,
+    values.observed = theta,
+    params.observed = params_observed
   )
 }

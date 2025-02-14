@@ -103,15 +103,13 @@ summary.bootstatespace <- function(object,
       # nocov end
     }
   }
-  return(
-    round(
-      .PBCI(
-        object = object,
-        alpha = alpha,
-        type = type
-      ),
-      digits = digits
-    )
+  round(
+    .PBCI(
+      object = object,
+      alpha = alpha,
+      type = type
+    ),
+    digits = digits
   )
 }
 
@@ -128,9 +126,7 @@ summary.bootstatespace <- function(object,
 #' @export
 vcov.bootstatespace <- function(object,
                                 ...) {
-  return(
-    object$vcov
-  )
+  object$vcov
 }
 
 #' Estimated Parameter Method for an Object of Class
@@ -146,9 +142,7 @@ vcov.bootstatespace <- function(object,
 #' @export
 coef.bootstatespace <- function(object,
                                 ...) {
-  return(
-    object$est
-  )
+  object$est
 }
 
 #' Confidence Intervals Method for an Object of Class
@@ -191,9 +185,7 @@ confint.bootstatespace <- function(object,
     x = varnames
   )
   colnames(ci) <- varnames
-  return(
-    ci
-  )
+  ci
 }
 
 #' Extract Generic Function
@@ -234,9 +226,7 @@ extract.bootstatespace <- function(object,
   output <- lapply(
     X = object$thetahatstar,
     FUN = function(i) {
-      return(
-        .Vec2Mat(x = i)
-      )
+      .Vec2Mat(x = i)
     }
   )
   if (is.null(what)) {

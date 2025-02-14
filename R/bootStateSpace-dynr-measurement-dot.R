@@ -19,14 +19,12 @@
       params_int[i, 1] <- "fixed"
     }
   }
-  return(
-    dynr::prep.measurement(
-      values.load = lambda,
-      params.load = .LambdaLabel(lambda = lambda),
-      state.names = paste0("eta_", seq_len(p)),
-      obs.names = paste0("y", seq_len(k)),
-      values.int = values_int,
-      params.int = params_int
-    )
+  dynr::prep.measurement(
+    values.load = lambda,
+    params.load = .LambdaLabel(lambda = lambda),
+    state.names = paste0("eta_", seq_len(p)),
+    obs.names = paste0("y", seq_len(k)),
+    values.int = values_int,
+    params.int = params_int
   )
 }

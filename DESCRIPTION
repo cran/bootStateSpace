@@ -1,6 +1,6 @@
 Package: bootStateSpace
 Title: Bootstrap for State Space Models
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: 
     person(given = "Ivan Jacob Agaloos",
            family = "Pesigan",
@@ -23,9 +23,9 @@ Imports: stats, simStateSpace, dynr
 Suggests: knitr, rmarkdown, testthat
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-01-21 17:10:18 UTC; root
+Packaged: 2025-02-14 20:32:15 UTC; root
 Author: Ivan Jacob Agaloos Pesigan [aut, cre, cph]
     (<https://orcid.org/0000-0003-4818-8420>)
 Maintainer: Ivan Jacob Agaloos Pesigan <r.jeksterslab@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-01-22 18:30:02 UTC
+Date/Publication: 2025-02-14 22:20:02 UTC

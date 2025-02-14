@@ -35,5 +35,5 @@
   if (!is.null(col_names)) {
     colnames(y_matrix) <- col_names
   }
-  return(y_matrix)
+  y_matrix
 }
